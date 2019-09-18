@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_012453) do
+ActiveRecord::Schema.define(version: 2019_09_05_002956) do
 
   create_table "my_classes", force: :cascade do |t|
     t.string "name"
     t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "test_classes", force: :cascade do |t|
+    t.datetime "startDate"
+    t.boolean "myBool"
+    t.float "myFloat"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

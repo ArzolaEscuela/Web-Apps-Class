@@ -1,0 +1,32 @@
+<%= form_with(model: test_class, local: true) do |form| %>
+  <% if test_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(test_class.errors.count, "error") %> prohibited this test_class from being saved:</h2>
+
+      <ul>
+        <% test_class.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :startDate %>
+    <%= form.datetime_select :startDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :myBool %>
+    <%= form.check_box :myBool %>
+  </div>
+
+  <div class="field">
+    <%= form.label :myFloat %>
+    <%= form.text_field :myFloat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

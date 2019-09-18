@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @test_class.startDate %>
+</p>
+
+<p>
+  <strong>Mybool:</strong>
+  <%= @test_class.myBool %>
+</p>
+
+<p>
+  <strong>Myfloat:</strong>
+  <%= @test_class.myFloat %>
+</p>
+
+<%= link_to 'Edit', edit_test_class_path(@test_class) %> |
+<%= link_to 'Back', test_classes_path %>
